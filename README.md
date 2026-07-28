@@ -1,78 +1,101 @@
 # 🚑 MediFlowRT: Real-Time Healthcare Analytics Platform on Azure
 
-> **An end-to-end Azure Data Engineering project demonstrating real-time
-> healthcare event ingestion, Medallion Architecture (Bronze → Silver →
-> Gold), dimensional modeling (SCD Type 2), Synapse Serverless SQL, and
-> Power BI analytics.**
+![Azure](https://img.shields.io/badge/Azure-Cloud-0078D4?logo=microsoftazure&style=flat-square)
+![Azure Event Hub](https://img.shields.io/badge/Azure-EventHub-0078D4?logo=microsoftazure&style=flat-square)
+![Azure Data Lake](https://img.shields.io/badge/Azure-DataLake-0078D4?logo=microsoftazure&style=flat-square)
+![Azure Synapse](https://img.shields.io/badge/Azure-Synapse%20Analytics-0078D4?logo=microsoftazure&style=flat-square)
+![Databricks](https://img.shields.io/badge/Databricks-PySpark-EF3E42?logo=databricks&style=flat-square)
+![PySpark](https://img.shields.io/badge/PySpark-Big%20Data-F37626?logo=apachespark&style=flat-square)
+![Python](https://img.shields.io/badge/Python-3.9+-3776AB?logo=python&style=flat-square)
+![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-F2C811?logo=powerbi&style=flat-square)
+![Git](https://img.shields.io/badge/Git-Version%20Control-F05032?logo=git&style=flat-square)
 
-![Azure](https://img.shields.io/badge/Azure-Cloud-blue?logo=microsoft-azure&style=flat-square)
-![Databricks](https://img.shields.io/badge/Databricks-PySpark-red?logo=databricks&style=flat-square)
-![PySpark](https://img.shields.io/badge/PySpark-Structured%20Streaming-orange?logo=apache-spark&style=flat-square)
-![Azure
-Synapse](https://img.shields.io/badge/Azure-Synapse-blue?logo=microsoft-azure&style=flat-square)
-![Power
-BI](https://img.shields.io/badge/Power%20BI-Dashboard-yellow?logo=power-bi&style=flat-square)
-![Python](https://img.shields.io/badge/Python-3.9+-blue?logo=python&style=flat-square)
+---
 
-------------------------------------------------------------------------
+# 🚀 Project Highlights
 
-## 📑 Table of Contents
+✔ End-to-End Azure Data Engineering Pipeline
 
--   [Project Overview](#project-overview)
--   [Architecture](#architecture)
--   [Objectives](#objectives)
--   [Project Structure](#project-structure)
--   [Tools & Technologies](#tools--technologies)
--   [Data Architecture](#data-architecture)
--   [Star Schema](#star-schema)
--   [Security & Secrets Management](#security--secrets-management)
--   [Data Quality Approach](#data-quality-approach)
--   [Implementation](#implementation)
--   [Data Analytics](#data-analytics)
--   [Known Limitations](#known-limitations)
--   [Key Outcomes](#key-outcomes)
--   [License](#license)
+✔ Real-Time Streaming with Azure Event Hub
 
-------------------------------------------------------------------------
+✔ Medallion Architecture (Bronze → Silver → Gold)
 
-## Project Overview
+✔ Azure Synapse SQL Data Warehouse
 
-This project implements a production-inspired healthcare analytics
-pipeline on Microsoft Azure. Streaming patient events are ingested
-through Azure Event Hub, processed with Databricks Structured Streaming,
-transformed using a Medallion Architecture, exposed through Synapse
-Serverless SQL, and visualized in Power BI.
+✔ Star Schema Data Modeling
 
-### Highlights
+✔ Interactive Power BI Dashboard
 
--   Real-time ingestion using Azure Event Hub
--   Databricks Structured Streaming ETL
--   Bronze → Silver → Gold Medallion Architecture
--   SCD Type 2 dimensional modeling
--   Delta Lake storage
--   Synapse Serverless SQL
--   Interactive Power BI dashboard
--   Secret Scope credential management
+✔ Production-Oriented Repository Structure
 
-## Architecture
+---
 
-> Replace this section with your architecture diagram.
+# 📑 Table of Contents
 
-------------------------------------------------------------------------
+- [📌 Project Overview](#-project-overview)
+- [🎯 Objectives](#-objectives)
+- [📂 Project Structure](#-project-structure)
+- [🛠️ Tools & Technologies](#️-tools--technologies)
+- [📐 Solution Architecture](#-solution-architecture)
+- [⭐ Star Schema Design](#-star-schema-design)
+- [⚙️ Step-by-Step Implementation](#️-step-by-step-implementation)
+- [📊 Analytics Dashboard](#-analytics-dashboard)
+- [💼 Business Value](#-business-value)
+- [🎯 Skills Demonstrated](#-skills-demonstrated)
+- [✅ Key Outcomes](#-key-outcomes)
+- [📜 License](#-license)
 
-## Objectives
+---
 
--   Stream patient events from Event Hub.
--   Validate and clean incoming records.
--   Build dimensional Gold tables.
--   Query Delta Lake through Synapse Serverless SQL.
--   Deliver interactive Power BI reporting.
+# 📌 Project Overview
 
-------------------------------------------------------------------------
+**MediFlowRT** is an end-to-end **real-time healthcare analytics platform** built on Microsoft Azure. The project simulates hospital patient events, ingests streaming healthcare data, processes and transforms it using Azure Databricks, stores curated datasets in Azure Synapse SQL Pool, and visualizes operational KPIs through Power BI.
 
-## Project Structure
+The solution demonstrates modern cloud-native data engineering practices including real-time streaming, Medallion Architecture, dimensional modeling, and business intelligence reporting.
 
-``` text
+### Part 1 – Data Engineering
+
+Build a scalable real-time ingestion and transformation pipeline using Azure cloud services.
+
+### Part 2 – Business Analytics
+
+Connect Azure Synapse SQL Pool to Power BI and develop an interactive dashboard for hospital operations and patient flow monitoring.
+
+---
+
+# 📐 Solution Architecture
+
+The platform follows a modern cloud data engineering architecture:
+
+- Simulate hospital patient events using Python.
+- Stream data into Azure Event Hub.
+- Store raw data in Azure Data Lake Storage Gen2.
+- Process streaming data using Azure Databricks (PySpark).
+- Transform data using the Bronze → Silver → Gold Medallion Architecture.
+- Load curated datasets into Azure Synapse SQL Pool.
+- Build an interactive Power BI dashboard for operational analytics.
+
+## Pipeline Architecture
+
+<img width="4719" height="2432" alt="Architecture" src="https://github.com/user-attachments/assets/cb1a1775-ab64-45d7-b45b-50ba97660e1d"/>
+
+---
+
+# 🎯 Objectives
+
+- Build a real-time healthcare data pipeline on Azure.
+- Ingest streaming patient data using Azure Event Hub.
+- Process and transform streaming data using Azure Databricks (PySpark).
+- Store curated datasets in Azure Data Lake Storage.
+- Design a Star Schema in Azure Synapse SQL Pool.
+- Enable interactive analytics using Power BI.
+- Manage source code with Git and GitHub.
+
+---
+
+# 📂 Project Structure
+
+```text
 MediFlowRT/
 │
 ├── databricks_notebook/
@@ -84,135 +107,223 @@ MediFlowRT/
 │   └── patient_flow_generator.py
 │
 ├── SQL/
-│   ├── SQL_pool_quries.sql
-│   └── SQL_views_DDL.sql
+│   ├── SQL_views_DDL.sql
+│   └── SQL_pool_queries.sql
 │
 ├── client_requirements/
-│   └── client_requirements_de.pdf
 │
 ├── Hospital_Dashboard.pbix
+│
 ├── README.md
+│
 └── LICENSE
 ```
 
-------------------------------------------------------------------------
+---
 
-## Tools & Technologies
+# 🛠️ Tools & Technologies
 
-  Category          Technology
-  ----------------- ------------------------------------------
-  Streaming         Azure Event Hub
-  Processing        Azure Databricks, PySpark
-  Storage           Azure Data Lake Storage Gen2, Delta Lake
-  Analytics         Synapse Serverless SQL
-  Visualization     Power BI
-  Language          Python
-  Version Control   Git
+| Technology | Purpose |
+|------------|---------|
+| Azure Event Hub | Real-time Data Ingestion |
+| Azure Databricks | Stream Processing & ETL |
+| PySpark | Distributed Data Processing |
+| Azure Data Lake Storage Gen2 | Data Lake Storage |
+| Azure Synapse SQL Pool | Data Warehouse |
+| Power BI | Dashboard & Visualization |
+| Python | Data Simulation |
+| SQL | Data Modeling |
+| Git & GitHub | Version Control |
 
-------------------------------------------------------------------------
+---
 
-## Data Architecture
+# 📐 Data Architecture
 
--   **Bronze:** Raw streaming events stored as Delta.
--   **Silver:** Cleansed and validated data with quality flags.
--   **Gold:** SCD Type 2 dimensions and fact table optimized for BI.
+The project follows the **Medallion Architecture** for scalable data engineering.
 
-## Star Schema
+## 🥉 Bronze Layer
 
-**Fact**
+- Stores raw JSON events from Azure Event Hub.
+- Maintains immutable source data.
+- Serves as the ingestion layer.
 
--   `fact_patient_flow`
+## 🥈 Silver Layer
 
-**Dimensions**
+- Cleanses raw data.
+- Handles missing values.
+- Performs schema validation.
+- Standardizes data types.
 
--   `dim_patient`
--   `dim_department`
+## 🥇 Gold Layer
 
-------------------------------------------------------------------------
+- Creates business-ready datasets.
+- Generates aggregated metrics.
+- Builds dimensional tables.
+- Optimized for Power BI reporting.
 
-## Security & Secrets Management
+---
 
--   Databricks Secret Scopes
--   Environment variables for simulator credentials
--   Managed Identity for Synapse access
--   No secrets stored in source code
+# ⭐ Star Schema Design
 
-------------------------------------------------------------------------
+The Gold Layer is modeled using a Star Schema for high-performance analytical queries.
 
-## Data Quality Approach
+## Fact Table
 
--   Validate age and timestamps
--   Flag invalid records
--   Preserve raw data
--   Exclude invalid records from Gold while retaining them in Silver for
-    auditing
+**FactPatientFlow**
 
-------------------------------------------------------------------------
+Contains:
 
-## Implementation
+- Patient Visits
+- Admission Time
+- Discharge Time
+- Waiting Time
+- Length of Stay
 
-### 1. Event Hub
+## Dimension Tables
 
-Configure Event Hub and Kafka-compatible endpoint.
+- DimPatient
+- DimDepartment
+- DimTime
 
-### 2. Data Simulation
+This dimensional model improves query performance and supports interactive reporting.
 
-[Producer Code](simulator/patient_flow_generator.py)
+---
 
-### 3. Storage
+# ⚙️ Step-by-Step Implementation
 
-Create Bronze, Silver and Gold Delta Lake containers.
+## 1️⃣ Azure Event Hub
 
-### 4. Databricks
+- Created Azure Event Hub Namespace.
+- Configured Patient Flow Event Hub.
+- Created Consumer Groups for Databricks Streaming.
 
--   [Notebook 1](databricks_notebook/01_bronze_rawdata.py)
--   [Notebook 2](databricks_notebook/02_silver_cleandata.py)
--   [Notebook 3](databricks_notebook/03_gold_transform.py)
+---
 
-### 5. Synapse Serverless SQL
+## 2️⃣ Patient Data Simulation
 
--   [SQL_pool_quries.sql](SQL/SQL_pool_quries.sql)
--   [SQL_views_DDL.sql](SQL/SQL_views_DDL.sql)
+A Python simulator continuously generates synthetic patient events and publishes them to Azure Event Hub.
 
-### 6. Power BI
+Source Code:
 
-Connect Synapse Serverless SQL and build KPI dashboards.
+`simulator/patient_flow_generator.py`
 
-------------------------------------------------------------------------
+---
 
-## Data Analytics
+## 3️⃣ Azure Data Lake Storage
 
-Dashboard KPIs include:
+Configured Azure Data Lake Storage Gen2 with separate containers for:
 
--   Department workload
--   Patient flow trends
--   Length of stay
--   Current admissions
--   Gender analysis
--   Interactive slicers
+- Bronze
+- Silver
+- Gold
 
-------------------------------------------------------------------------
+---
 
-## Known Limitations
+## 4️⃣ Azure Databricks
 
--   Synthetic dataset only
--   Occupancy metric is a proxy
--   Gold layer refresh is scheduled batch
--   Designed as a portfolio demonstration
+### Bronze Notebook
 
-------------------------------------------------------------------------
+Reads streaming data from Azure Event Hub.
 
-## Key Outcomes
+### Silver Notebook
 
--   Production-style Azure architecture
--   Real-time streaming pipeline
--   Modern dimensional modeling
--   Business-ready analytics
--   Strong Azure Data Engineering portfolio project
+Performs:
 
-------------------------------------------------------------------------
+- Schema Validation
+- Data Cleansing
+- Null Handling
+- Type Casting
 
-## License
+### Gold Notebook
 
-This project is licensed under the MIT License. See the
-[LICENSE](LICENSE) file for details.
+Creates:
+
+- Aggregated Metrics
+- Dimension Tables
+- Fact Tables
+- Star Schema
+
+---
+
+## 5️⃣ Azure Synapse SQL Pool
+
+Created a Dedicated SQL Pool.
+
+Implemented:
+
+- Fact Table
+- Dimension Tables
+- SQL Views
+- Optimized Warehouse Schema
+
+---
+
+## 6️⃣ Version Control
+
+Managed project development using Git and GitHub.
+
+---
+
+# 📊 Analytics Dashboard
+
+After building the data pipeline and Star Schema, Azure Synapse SQL Pool was connected to Power BI to create an interactive healthcare dashboard.
+
+## Dashboard Features
+
+- Total Patients
+- Bed Occupancy Rate
+- Average Waiting Time
+- Patient Admission Trends
+- Department Performance
+- Length of Stay
+- Gender Distribution
+- Interactive Filters & Slicers
+
+<img width="1282" height="724" alt="Dashboard" src="https://github.com/user-attachments/assets/cf1f84dc-c1a5-4f07-84aa-1658abb4db16"/>
+
+---
+
+# 💼 Business Value
+
+This solution enables hospital administrators to:
+
+- Monitor patient flow in real time.
+- Track department efficiency.
+- Optimize bed utilization.
+- Reduce patient waiting time.
+- Improve operational decision-making.
+- Support healthcare resource planning.
+
+---
+
+# 🎯 Skills Demonstrated
+
+- Azure Cloud
+- Azure Event Hub
+- Azure Databricks
+- PySpark
+- Structured Streaming
+- Azure Data Lake Storage Gen2
+- Azure Synapse Analytics
+- SQL
+- Star Schema Design
+- ETL Pipelines
+- Data Warehousing
+- Power BI
+- Git & GitHub
+- Python
+
+---
+
+# ✅ Key Outcomes
+
+- Built a complete end-to-end Azure Data Engineering pipeline.
+- Implemented Medallion Architecture (Bronze → Silver → Gold).
+- Designed a scalable Star Schema in Azure Synapse SQL Pool.
+- Developed an interactive Power BI dashboard for healthcare analytics.
+- Demonstrated modern cloud-based data engineering and analytics practices suitable for enterprise-scale solutions.
+
+---
+## 📜 License
+
+This repository is provided for learning, portfolio demonstration, and experimentation. It is licensed under the MIT License. See the LICENSE file for details.
